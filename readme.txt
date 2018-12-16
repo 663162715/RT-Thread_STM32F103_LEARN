@@ -1,2 +1,2 @@
-#本项目是基于于STM32F103RCT6的RT-Thread操作系统学习项目
+#This project is a learning project about RT_Thread based on STM32F103RCT6
 

@@ -874,7 +874,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>finish</GroupName>
+          <GroupName>finsh</GroupName>
           <Files>
             <File>
               <FileName>cmd.c</FileName>

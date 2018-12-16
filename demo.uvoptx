@@ -1409,7 +1409,7 @@
   </Group>
 
   <Group>
-    <GroupName>finish</GroupName>
+    <GroupName>finsh</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
