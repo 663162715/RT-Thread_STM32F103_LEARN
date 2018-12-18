@@ -28,6 +28,7 @@
 #pragma section("VSymTab",read)
 #endif
 
+
 typedef long (*syscall_func)(void);
 
 /* system call table */

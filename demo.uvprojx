@@ -869,7 +869,7 @@
             <File>
               <FileName>pin.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\源码\rt-thread-v3.1.0\components\drivers\misc\pin.c</FilePath>
+              <FilePath>.\rt-thread\components\drivers\misc\pin.c</FilePath>
             </File>
           </Files>
         </Group>

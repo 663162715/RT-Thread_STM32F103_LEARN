@@ -12,7 +12,9 @@
  * 2015-07-29     Arda.Fu      first implementation
  */
 #include <rtthread.h>
+#include <finsh.h>
 #include <led.h>
+#include <stm32f103xe.h>
 
 #define THREAD_PRIORITY         25
 #define THREAD_STACK_SIZE       512
@@ -26,12 +28,10 @@ static void led_th_entry(void* parameter)
 {
    
 	rt_pin_mode(LED0,PIN_MODE_OUTPUT);
+	GPIOA->ODR |= 1 << 8;
     while (1)
     {
-		rt_pin_write(LED0,PIN_LOW);
-        rt_thread_delay(rt_tick_from_millisecond(500));
-		rt_pin_write(LED0,PIN_HIGH);
-       
+		//user handler
         rt_thread_delay(rt_tick_from_millisecond(500));
     }
 }
@@ -57,9 +57,29 @@ int mine_rt_application_init()
     return 0;
 }
 
+//¿ØÖÆÌ¨LEDÖ¸Áî
+int led_switch(void)
+{
+	if(rt_pin_read(LED0)==1)
+	{
+		rt_kprintf("led on!\n");
+		rt_pin_write(LED0,PIN_LOW);
+	}
+	else
+	{
+		rt_kprintf("led off!\n");
+		rt_pin_write(LED0,PIN_HIGH);
+	}
+    
+    return 0;
+}
+MSH_CMD_EXPORT(led_switch, my command test);
+
 int main(void)
 {
     /* user app entry */
 	mine_rt_application_init();
     return 0;
 }
+
+
