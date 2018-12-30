@@ -22,7 +22,6 @@
 
 /* 指向线程控制块的指针 */
 static rt_thread_t tid1 = RT_NULL;
-
 /* 线程入口 */
 static void led_th_entry(void* parameter)
 {
@@ -35,8 +34,6 @@ static void led_th_entry(void* parameter)
         rt_thread_delay(rt_tick_from_millisecond(500));
     }
 }
-
-
 
 /* 用户应用入口 */
 int mine_rt_application_init()
@@ -56,6 +53,7 @@ int mine_rt_application_init()
         return -1;
     return 0;
 }
+
 
 //控制台LED指令
 int led_switch(void)
@@ -78,8 +76,8 @@ MSH_CMD_EXPORT(led_switch, my command test);
 int main(void)
 {
     /* user app entry */
-	mine_rt_application_init();
-    return 0;
+	mine_rt_application_init();	
+    	return 0;
 }
 
-
+    

@@ -21,6 +21,7 @@
 #define __STM32_PIN(index, gpio, gpio_index) (gpio | gpio_index)
 #define __STM32_PIN_DEFAULT 0
 
+
 #define A   (1U << 8)
 #define B   (2U << 8)
 #define C   (3U << 8)
